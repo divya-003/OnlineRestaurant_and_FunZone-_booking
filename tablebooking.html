@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>booking</title>
+</head>
+
+  <style>
+  p{
+    font-size: 60px;
+  }
+  body{
+    background-image:url("restaurent.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    text-align:center;
+    }
+  table{
+  border:2px solid black ;
+  text-align: center;
+  margin-left: auto;
+  margin-right:auto;
+  background-size:cover;
+  }
+  form{
+    position: center;
+    text-align:center;
+    padding-bottom: 30px;
+    width: 600px;
+	height: 550px;
+	padding: 80px 40px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  tr,th,td{
+  font-size: 30px;
+  color: white;
+  padding: 20px 20px 20px 20px;
+}
+  </style>
+<body>
+<p style="color:red"> TABLE BOOKING </p>
+<script language="javascript" type="text/javascript">
+function bookingform(){
+  var name=document.book.name.value;
+  var mobileno=document.book.mobileno.value;
+  var phoneno = /^\d{10}$/;
+  var date=document.book.date.value;
+  var slot=document.book.slot.value;
+  var persons=document.book.persons.value;
+  if(name==""||name==" ")
+  {
+    window.alert("Name can't be blank");
+
+    return false;
+  }
+  else if(!(mobileno.match(phoneno)))
+  {
+      window.alert("Mobile number should have 10 numbers not 10 characters");
+    return false;
+  }
+  else if(date=="")
+  {
+        window.alert("select date from calendar");
+      return false;
+  }
+  else if(slot=="")
+  {
+        window.alert("select slot");
+      return false;
+  }
+  else if(persons.length==0)
+  {
+        window.alert("Update no.of persons");
+      return false;
+  }
+}
+</script>
+      <form method="post" name="book" onsubmit="return bookingform()">
+      <table>
+      <tr>
+        <th> NAME: </th>
+        <td><input type="text" name="name" value=""></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <th>PHONE NUMBER: </th>
+        <td><input type="tel" name="mobileno" value=""></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+      <tr>
+        <th>DATE: </th>
+        <td><input type="date" name="date" value=""></td>
+      </tr>
+      <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><th>SLOT:</th><th>
+          <select name="slot" value="">
+        <option>8AM</option>
+        <option>9AM</option>
+        <option>10AM</option>
+        <option>11AM</option>
+        <option>12PM</option>
+        <option>2PM</option>
+        <option>3PM</option>
+        <option>4PM</option>
+        <option>5PM</option>
+        <option>6PM</option>
+        <option>7PM</option>
+        <option>8PM</option>
+        <option>9PM</option>
+        </select>
+      </th></tr><tr>
+        </tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><th>NO.OF PERSONS:</th>
+        <td><input type="number" name="persons" value=""></td>
+      </tr>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr>
+          <th><a href="home.html"><input class="back" type="button" value="Back" /></a> </th>
+          <th colspan="2" align="right"><input type="submit" value="Proceed"></th>
+        </tr>
+      </table>
+    </form>
+    </body>
+    </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="circlecss.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <header>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+  <div id="container">
+    <h1 style="text-align:center ;color:white ;font-size:50px ;font-family:cursive;"> SIP IT!!!&nbsp GAME IT!!! </h1>
+    <div class="w3-bar w3-light-green">
+    <div class="w3-bar-item w3-button w3-light-green w3-mobile"><a href="home.html" style="text-decoration:none;">HOME</a></div>
+    <div class="w3-bar-item w3-button w3-light-green w3-mobile"><a href="aboutus.html" style="text-decoration:none;">ABOUT US</a></div>
+    <div class="w3-bar-item w3-button w3-light-green w3-mobile"><a href="contactus.html" style="text-decoration:none;">CONTACT US</a></div>
+    <div class="w3-bar-item w3-button w3-light-green w3-mobile"><a href="foodmenu.html" style="text-decoration:none;">FOOD MENU</a></div>
+    <a href="login.html" class="w3-bar-item w3-button w3-right w3-light-green w3-mobile" style="text-decoration:none;">LOGIN</a>
+  </div>
+  </header>
+  <body>
+    <div id='right'>
+  <marquee behavior="scroll" direction="up" scrollamount="15">
+    <table><tr><td><img src="bowling.jpg" width="150%" height="250px" alt="Natural" /></td></tr>
+  <tr><td><img src="lazer.jpg" width="110%" height="200px" alt="Natural" /></td></tr>
+  <tr><td><img src="pool.jpg" width="100%" height="200px" alt="Natural" /></td></tr>
+  <tr><td><img src="foosball.jpg" width="100%" height="250px" alt="Natural" /></td></tr>
+  </table>
+  </marquee>
+  </div>
+  <div id='left'>
+<marquee behavior="scroll" direction="down" scrollamount="10">
+  <table><tr><td><a href="3a.html"><img src="food1.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="3B.html"><img src="burger.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="3C.html"><img src="noodles.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+<tr><td><a href="3C.html"><img src="dessert.jpg" width="100%" height="200px" alt="Natural" /></a></td></tr>
+</table>
+</marquee>
+</div>
+<script language="javascript" type="text/javascript">
+function loginform(){
+  var emailid=document.myform.emailid.value;
+  var mobileno=document.myform.mobileno.value;
+  var phoneno = /^\d{10}$/;
+  var password=document.myform.password.value;
+  var atposition=emailid.indexOf("@");
+  var dotposition=emailid.lastIndexOf(".");
+
+  if(atposition<1 || dotposition<atposition+2 || dotposition+2>=emailid.length)
+  {
+      window.alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);
+
+    return false;
+  }
+  else if(!(mobileno.match(phoneno)))
+  {
+      window.alert("Mobile number should have 10 numbers not 10 characters");
+    return false;
+  }
+  else if(password.length<6)
+  {
+        window.alert("password must be atleast 6 characters long");
+      return false;
+  }
+}
+</script>
+
+    <center>
+<form method="post" name="myform" onsubmit="return loginform()">
+<table>
+<tr>
+  <br/><br/><br/><br/><br/>
+	<td style="color:red">EMAIL-ID</td>
+	<td><input type="email" name="emailid" value=""/></td>
+</tr>
+<tr>
+	<td style="color:red">MOBILE.NO</td>
+	<td><input type="tel" name="mobileno" value=""/></td>
+</tr>
+<tr>
+	<td style="color:red">PASSWORD</td>
+	<td><input type="password" name="password" value=""/></td>
+</tr>
+<tr>
+	<td><center>
+ 	<input type="submit" name="submit" value="login"/>
+	<a style="color:red" href="signup.html">signup</a>
+	</center>
+	</td>
+</tr>
+</table>
+</form>
+</center>
+  </body>
+</html>
