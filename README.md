@@ -1,4 +1,4 @@
-# OnlineRestaurant_and_FunZone-_booking
+# OnlineRestaurant_and_FunZone_booking
 This is a website for a Food platform and game zone, which functions
 with the restaurants. This website provides functionality for online
 registration and giving feedback to the restaurant, it also provides the
